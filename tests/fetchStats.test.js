@@ -128,6 +128,8 @@ describe("Test fetchStats", () => {
       totalStars: 300,
       totalDiscussionsStarted: 0,
       totalDiscussionsAnswered: 0,
+      totalRepos: 5,
+      totalFollowers: 100,
       rank,
     });
   });
@@ -164,6 +166,8 @@ describe("Test fetchStats", () => {
       totalStars: 300,
       totalDiscussionsStarted: 0,
       totalDiscussionsAnswered: 0,
+      totalRepos: 5,
+      totalFollowers: 100,
       rank,
     });
   });
@@ -188,6 +192,7 @@ describe("Test fetchStats", () => {
           user: {
             name: "Anurag Hazra",
             repositories: {
+              totalCount: 5,
               nodes: [
                 { name: "repo-1", stargazers: { totalCount: 150 } },
                 { name: "repo-2", stargazers: { totalCount: 150 } },
@@ -237,6 +242,8 @@ describe("Test fetchStats", () => {
       totalStars: 300,
       totalDiscussionsStarted: 0,
       totalDiscussionsAnswered: 0,
+      totalRepos: 5,
+      totalFollowers: 100,
       rank,
     });
   });
@@ -268,6 +275,7 @@ describe("Test fetchStats", () => {
         user: {
           name: "Anurag Hazra",
           repositories: {
+            totalCount: 5,
             nodes: [
               { name: "test-repo-1", stargazers: { totalCount: 100 } }, // to exclude
               { name: "repo-2", stargazers: { totalCount: 50 } },
@@ -315,6 +323,8 @@ describe("Test fetchStats", () => {
       totalStars: 100,
       totalDiscussionsStarted: 0,
       totalDiscussionsAnswered: 0,
+      totalRepos: 5,
+      totalFollowers: 100,
       rank,
     });
   });
@@ -346,6 +356,8 @@ describe("Test fetchStats", () => {
       totalStars: 400,
       totalDiscussionsStarted: 0,
       totalDiscussionsAnswered: 0,
+      totalRepos: 5,
+      totalFollowers: 100,
       rank,
     });
   });
@@ -377,6 +389,8 @@ describe("Test fetchStats", () => {
       totalStars: 300,
       totalDiscussionsStarted: 0,
       totalDiscussionsAnswered: 0,
+      totalRepos: 5,
+      totalFollowers: 100,
       rank,
     });
   });
@@ -408,6 +422,8 @@ describe("Test fetchStats", () => {
       totalStars: 300,
       totalDiscussionsStarted: 0,
       totalDiscussionsAnswered: 0,
+      totalRepos: 5,
+      totalFollowers: 100,
       rank,
     });
   });
@@ -437,6 +453,8 @@ describe("Test fetchStats", () => {
       totalStars: 300,
       totalDiscussionsStarted: 0,
       totalDiscussionsAnswered: 0,
+      totalRepos: 5,
+      totalFollowers: 100,
       rank,
     });
   });
@@ -466,6 +484,8 @@ describe("Test fetchStats", () => {
       totalStars: 300,
       totalDiscussionsStarted: 10,
       totalDiscussionsAnswered: 40,
+      totalRepos: 5,
+      totalFollowers: 100,
       rank,
     });
   });

@@ -370,6 +370,8 @@ const fetchStats = async (
     totalDiscussionsAnswered: 0,
     contributedTo: 0,
     rank: { level: "C", percentile: 100 },
+    totalRepos: 0,
+    totalFollowers: 0,
   };
 
   let res = await statsFetcher({
@@ -440,15 +442,19 @@ const fetchStats = async (
       return prev + curr.stargazers.totalCount;
     }, 0);
 
+  // Store repo and follower counts for multi-account aggregation
+  stats.totalRepos = user.repositories.totalCount;
+  stats.totalFollowers = user.followers.totalCount;
+
   stats.rank = calculateRank({
     all_commits: include_all_commits,
     commits: stats.totalCommits,
     prs: stats.totalPRs,
     reviews: stats.totalReviews,
     issues: stats.totalIssues,
-    repos: user.repositories.totalCount,
+    repos: stats.totalRepos,
     stars: stats.totalStars,
-    followers: user.followers.totalCount,
+    followers: stats.totalFollowers,
   });
 
   return stats;
