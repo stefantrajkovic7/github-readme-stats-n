@@ -34,8 +34,10 @@ export default function handler(req, res) {
 
   const legend = items
     .map((item, index) => {
-      const col = index % 2;
-      const row = Math.floor(index / 2);
+      const itemsPerColumn = 5;
+      const col = index < itemsPerColumn ? 0 : 1;
+      const row = index % itemsPerColumn;
+
       const x = padding + col * 190;
       const y = 110 + row * 32;
 
